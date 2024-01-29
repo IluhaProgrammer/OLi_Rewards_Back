@@ -6,7 +6,7 @@ import { AuthDto, LogDto, RefreshDto } from './auth.dto';
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
-  @Post('register')
+  @Post('register') 
   @HttpCode(200)
   @UsePipes(new ValidationPipe())
   register(@Body() data : AuthDto) {  
